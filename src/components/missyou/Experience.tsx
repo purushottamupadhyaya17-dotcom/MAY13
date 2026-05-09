@@ -20,7 +20,7 @@ export function Experience() {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-xs uppercase tracking-[0.5em] text-rose-glow"
         >
-          A quiet letter
+          A love letter, in pink
         </motion.p>
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +30,8 @@ export function Experience() {
         >
           I miss you,
           <br />
-          <span className="italic">Pratiksha.</span>
+          <span className="italic">Pratiksha</span>
+          <span className="text-rose"> ♡</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
@@ -38,8 +39,8 @@ export function Experience() {
           transition={{ duration: 1, delay: 0.9 }}
           className="mt-8 max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg"
         >
-          A small, glowing place I made between us — for the in-between days.
-          Stay a while.
+          A soft, blushing little world I built just for us —
+          somewhere my heart can sit beside yours, even when we're apart.
         </motion.p>
 
         <motion.div
@@ -48,7 +49,7 @@ export function Experience() {
           transition={{ duration: 1.5, delay: 1.4 }}
           className="mt-16 text-[10px] uppercase tracking-[0.4em] text-muted-foreground/70"
         >
-          ↓ scroll, slowly
+          ↓ scroll, my love
         </motion.div>
       </section>
 

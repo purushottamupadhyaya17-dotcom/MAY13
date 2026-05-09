@@ -45,15 +45,15 @@
 :root {
   --radius: 1rem;
 
-  /* Midnight Rose & Charcoal palette */
-  --obsidian: oklch(0.13 0.015 290);
-  --charcoal: oklch(0.18 0.018 290);
-  --rose: oklch(0.78 0.13 35);          /* rose gold */
-  --rose-glow: oklch(0.85 0.16 30);
-  --violet-soft: oklch(0.65 0.15 295);
+  /* Romantic Blush & Rose palette */
+  --obsidian: oklch(0.96 0.03 15);
+  --charcoal: oklch(0.93 0.05 12);
+  --rose: oklch(0.72 0.18 8);           /* deep romantic pink */
+  --rose-glow: oklch(0.82 0.17 12);
+  --violet-soft: oklch(0.78 0.14 350);
 
-  --background: oklch(0.11 0.012 285);
-  --foreground: oklch(0.96 0.01 80);
+  --background: oklch(0.95 0.04 12);
+  --foreground: oklch(0.28 0.08 10);
 
   --card: oklch(0.18 0.02 290 / 0.55);
   --card-foreground: oklch(0.96 0.01 80);

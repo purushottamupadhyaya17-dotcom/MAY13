@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 
 // Set to a recent past date — adjust as needed
-const SINCE = new Date();
-SINCE.setDate(SINCE.getDate() - 12);
-SINCE.setHours(SINCE.getHours() - 5);
+const SINCE = new Date("2026-01-12T10:30:00");
 
 function diff(now: Date) {
   let s = Math.max(0, Math.floor((now.getTime() - SINCE.getTime()) / 1000));

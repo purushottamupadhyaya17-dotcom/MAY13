@@ -16,15 +16,15 @@ const TREASURES: Treasure[] = [
     Icon: Key,
     label: "Brass Key",
     photo:
-      "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?auto=format&fit=crop&w=900&q=80",
-    caption: "the key to my quiet hours",
+      "/images/Upload3.jpg",
+    caption: "My safest person",
   },
   {
     id: "locket",
     Icon: Heart,
     label: "Glowing Locket",
     photo:
-      "https://images.unsplash.com/photo-1499678329028-101435549a4e?auto=format&fit=crop&w=900&q=80",
+      "/images/Upload4.jpg",
     caption: "you, kept close to my chest",
   },
   {
@@ -32,32 +32,32 @@ const TREASURES: Treasure[] = [
     Icon: Mail,
     label: "Sealed Letter",
     photo:
-      "https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=900&q=80",
-    caption: "all the words I haven't sent",
+      "/images/Upload1.jpg",
+    caption: "Half peace, half madness",
   },
   {
     id: "vial",
     Icon: Sparkles,
     label: "Vial of Stars",
     photo:
-      "https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?auto=format&fit=crop&w=900&q=80",
-    caption: "a sky we once shared",
+      "/images/Upload2.jpg",
+    caption: "Accidentally perfect together",
   },
   {
     id: "book",
     Icon: BookHeart,
     label: "Vintage Book",
     photo:
-      "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=900&q=80",
-    caption: "our story, still being written",
+      "/images/Upload5.jpg",
+    caption: "Love looks good on us",
   },
   {
     id: "rose",
     Icon: Flower,
     label: "A Single Rose",
     photo:
-      "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80",
-    caption: "for the way you bloom",
+      "/images/Upload6.jpg",
+    caption: "US > everything",
   },
 ];
 
@@ -71,8 +71,68 @@ export function HiddenTreasures() {
       return next;
     });
 
+const createFloatingText = (e: React.MouseEvent) => {
+  const text = document.createElement("div");
+
+  text.innerText = "mein tera ♡";
+  text.style.position = "fixed";
+  text.style.left = `${e.clientX}px`;
+  text.style.top = `${e.clientY}px`;
+  text.style.color = "white";
+  text.style.fontSize = "20px";
+  text.style.fontFamily = "cursive";
+  text.style.fontWeight = "bold";
+  text.style.pointerEvents = "none";
+  text.style.zIndex = "9999";
+  text.style.transition = "all 1s ease-out";
+  text.style.textShadow = "0 0 10px rgba(255,255,255,0.8)";
+
+  document.body.appendChild(text);
+
+  // floating hearts
+  for (let i = 0; i < 5; i++) {
+    const heart = document.createElement("div");
+
+    heart.innerText = "♡";
+    heart.style.position = "fixed";
+    heart.style.left = `${e.clientX + (Math.random() * 60 - 30)}px`;
+    heart.style.top = `${e.clientY + (Math.random() * 40 - 20)}px`;
+    heart.style.color = "#ffc0cb";
+    heart.style.fontSize = `${12 + Math.random() * 10}px`;
+    heart.style.pointerEvents = "none";
+    heart.style.zIndex = "9999";
+    heart.style.transition = "all 1s ease-out";
+    heart.style.opacity = "1";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.style.transform = `
+        translateY(-60px)
+        translateX(${Math.random() * 60 - 30}px)
+        rotate(${Math.random() * 90 - 45}deg)
+      `;
+      heart.style.opacity = "0";
+    }, 10);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 1000);
+  }
+
+  setTimeout(() => {
+    text.style.transform = "translateY(-50px)";
+    text.style.opacity = "0";
+  }, 10);
+
+  setTimeout(() => {
+    text.remove();
+  }, 1000);
+};
+
   return (
-    <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-24">
+    <section className="mx-auto w-full max-w-6xl px-6 py-16 sm:py-24"
+    onClick={createFloatingText}>
       <div className="text-center">
         <p className="text-xs uppercase tracking-[0.35em] text-rose-glow/80">
           Section i
@@ -140,7 +200,7 @@ export function HiddenTreasures() {
                       className="flex-1 rounded-md bg-cover bg-center"
                       style={{ backgroundImage: `url(${t.photo})` }}
                     />
-                    <p className="mt-3 px-1 text-center font-hand text-base text-charcoal">
+                    <p className="mt-3 px-1  text-center font-hand text-xl text-pink-rose drop-shadow-lg">
                       {t.caption}
                     </p>
                   </motion.div>

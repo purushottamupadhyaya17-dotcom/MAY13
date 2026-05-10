@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const TEXT = `Pratiksha, every moment away from you feels like a quiet whisper of how much you mean to me. Your laughter is the melody I keep on repeat, and your presence is the warmth I carry through the day. I miss the small things — the way you smile, our inside jokes, and the simple comfort of being near you. This space is a tiny reflection of the world we've built together, waiting for the day we can add more memories to it.`;
+const TEXT = `Love, every moment away from you feels like a quiet whisper of how much you mean to me. Your laughter is the melody I keep on repeat, and your presence is the warmth I carry through the day. I miss the small things — the way you smile, our inside jokes, and the simple comfort of being near you. This space is a tiny reflection of the world we've built together, waiting for the day we can add more memories to it.`;
 
 export function Reflections() {
   return (

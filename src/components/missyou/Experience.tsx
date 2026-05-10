@@ -30,7 +30,7 @@ export function Experience() {
         >
           I miss you,
           <br />
-          <span className="italic">Pratiksha</span>
+          <span className="italic">My Babygirl</span>
           <span className="text-rose"> ♡</span>
         </motion.h1>
         <motion.p

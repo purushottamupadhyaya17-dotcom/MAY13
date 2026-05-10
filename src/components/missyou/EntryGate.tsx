@@ -8,7 +8,7 @@ export function EntryGate({ onUnlock }: { onUnlock: () => void }) {
 
   const submit = (e: FormEvent) => {
     e.preventDefault();
-    if (value.trim().toLowerCase() === "forever") {
+    if (value.trim().toLowerCase() === "meintera") {
       onUnlock();
     } else {
       setError(true);
@@ -52,7 +52,7 @@ export function EntryGate({ onUnlock }: { onUnlock: () => void }) {
         </motion.div>
 
         <h1 className="font-serif-display text-3xl md:text-4xl text-gradient-rose">
-          For Pratiksha
+          For My Babygirl
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
           A secret space, woven just for you.

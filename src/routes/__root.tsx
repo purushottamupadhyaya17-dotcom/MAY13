@@ -72,10 +72,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "For Pratiksha — A Quiet Place" },
+      { title: "For My Love — A Quiet Place" },
       { name: "description", content: "A secret little world made just for you." },
       { name: "author", content: "With love" },
-      { property: "og:title", content: "For Pratiksha" },
+      { property: "og:title", content: "For My Love" },
       { property: "og:description", content: "A secret little world made just for you." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
